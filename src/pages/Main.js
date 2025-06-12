@@ -2,6 +2,10 @@ import React from "react"
 
 import { HashLink } from "react-router-hash-link"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithubSquare, faInstagramSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { faSquareEnvelope } from "@fortawesome/free-solid-svg-icons"
+
 import Project from "../components/Project"
 import Skill from "../components/Skill"
 import Experience from "../components/Experience"
@@ -22,7 +26,7 @@ const Main = () => {
                 <HashLink smooth to={"#education"}>Education</HashLink>
             </nav>
             <main>
-                <img src={"https://picsum.photos/300/300"} />
+                <img src={"assets/me.jpg"} />
                 <h1>Matthew Perlman</h1>
                 <label>
                     Machine Learning
@@ -41,6 +45,13 @@ const Main = () => {
                     <div className={"dot"} />
                     iOS Mobile
                 </label>
+                <br />
+                <div className={"links"}>
+                    <a target={"_blank"} href={"https://github.com/mattperls-code"}><FontAwesomeIcon icon={faGithubSquare} /></a>
+                    <a target={"_blank"} href={"https://www.linkedin.com/in/matthew-perlman-a637a7301"}><FontAwesomeIcon icon={faLinkedin} /></a>
+                    <a target={"_blank"} href={"mailto:mattperls.code@gmail.com"}><FontAwesomeIcon icon={faSquareEnvelope} /></a>
+                    <a target={"_blank"} href={"https://www.instagram.com/mattperls"}><FontAwesomeIcon icon={faInstagramSquare} /></a>
+                </div>
             </main>
             <section id={"about"}>
                 <h1>About</h1>
@@ -170,11 +181,61 @@ const Main = () => {
             </section>
             <section id={"experience"}>
                 <h1>Experience</h1>
+                <Experience title={"RoboLancers Lead Programmer (2022 - 2024)"} images={["https://picsum.photos/400/250", "https://picsum.photos/500/300"]} projects={[]} tags={["Leadership", "Communication"]} description={
+                    <React.Fragment>
+                        Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
+                        <br />
+                        <br />
+                        Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                        <br />
+                        Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                    </React.Fragment>
+                } />
+                <Experience title={"RoboLancers Programmer (2020 - 2022)"} images={["https://picsum.photos/400/250", "https://picsum.photos/500/300"]} projects={["Lancer Scout", "Rapid React", "Other Game", "Other Project", "Other Game", "Other Project"]} tags={[]} description={
+                    <React.Fragment>
+                        Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
+                        <br />
+                        <br />
+                        Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                        <br />
+                        Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                    </React.Fragment>
+                } />
+                <Experience title={"Summer Camp Counselor (2024 - 2025)"} images={["https://picsum.photos/400/250", "https://picsum.photos/500/300"]} projects={[]} tags={[]} description={
+                    <React.Fragment>
+                        Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
+                        <br />
+                        <br />
+                        Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                        <br />
+                        Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                    </React.Fragment>
+                } />
             </section>
             <section id={"education"}>
                 <h1>Education</h1>
+                <div className={"education-container"}>
+                    <Education title={"UMass Amherst Undergrad"} description={
+                        <React.Fragment>
+                            Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
+                            <br />
+                            
+                            Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                        </React.Fragment>
+                    } />
+                    <Education title={"Central High School"} description={
+                        <React.Fragment>
+                            Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
+                            <br />
+                            <br />
+                            Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                            <br />
+                            <br />
+                            Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                        </React.Fragment>
+                    } />
+                </div>
             </section>
-            <footer></footer>
         </React.Fragment>
     )
 }
