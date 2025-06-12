@@ -62,7 +62,7 @@ const Main = () => {
             </section>
             <section id={"projects"}>
                 <h1>Projects</h1>
-                <Project title={"Convolutional Neural Network"} images={[]} languages={["C++"]} tags={["Machine Learning", "Algorithms", "Image Processing"]} description={
+                <Project title={"Convolutional Neural Network"} images={["https://picsum.photos/400", "https://picsum.photos/500", "https://picsum.photos/400/600"]} languages={["C++"]} tags={["Machine Learning", "Algorithms", "Image Processing"]} description={
                     <React.Fragment>
                         Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
                         <br />
@@ -79,11 +79,31 @@ const Main = () => {
                         Accusam scaevola quo an, in sit noster antiopam. Eu molestie maluisset definitionem nec, sed inani dicam cu, at sea dictas evertitur consetetur. Eam no odio illud minimum. Et sit facilisi tractatos signiferumque, sumo volumus incorrupte no sit.
                     </React.Fragment>
                 } />
-                <Project title={"Neural Network"} images={[]} languages={["C++"]} tags={["Machine Learning", "Algorithms"]} description={
+                <Project title={"Neural Network"} images={["https://picsum.photos/400", "https://picsum.photos/500"]} languages={["C++"]} tags={["Machine Learning", "Algorithms"]} description={
                     <React.Fragment>
                         Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
                         <br />
                         <br />
+                        Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                        <br />
+                    </React.Fragment>
+                } />
+                <Project title={"Convolutional Neural Network"} images={[]} languages={["C++", "Java", "Gnuplot"]} tags={["Machine Learning", "Algorithms", "Image Processing"]} description={
+                    <React.Fragment>
+                        Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
+                        <br />
+                        <br />
+                        Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                        <br />
+                        Eu eum epicuri omittam voluptatum. Meis molestiae ne usu. Suas hinc tation vix cu. Nam vitae sensibus accusamus ut, ea duo omnis mollis, pro fabulas consetetur ea. Vitae aeterno nam ex, id amet eripuit tincidunt cum, vim dicunt bonorum incorrupte et.
+                        <br />
+                        <br />
+                        Accusam scaevola quo an, in sit noster antiopam. Eu molestie maluisset definitionem nec, sed inani dicam cu, at sea dictas evertitur consetetur. Eam no odio illud minimum. Et sit facilisi tractatos signiferumque, sumo volumus incorrupte no sit.
+                    </React.Fragment>
+                } />
+                <Project title={"Neural Network"} images={["https://picsum.photos/500"]} languages={["C++"]} tags={["Machine Learning", "Algorithms"]} description={
+                    <React.Fragment>
+                        Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
                         Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
                         <br />
                         <br />
@@ -99,6 +119,54 @@ const Main = () => {
             </section>
             <section id={"skills"}>
                 <h1>Skills</h1>
+                <div className={"skills-container"}>
+                    <Skill title={"C++"} projects={["Convolutional Neural Network", "Neural Network"]} description={
+                        <React.Fragment>
+                            Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
+                            <br />
+                            
+                            Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                        </React.Fragment>
+                    } />
+                    <Skill title={"Algorithms"} projects={["Convolutional Neural Network", "Neural Network"]} description={
+                        <React.Fragment>
+                            Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
+                            <br />
+                            <br />
+                            Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                            <br />
+                            <br />
+                            Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                        </React.Fragment>
+                    } />
+                    <Skill title={"Machine Learning"} projects={["Convolutional Neural Network", "Neural Network"]} description={
+                        <React.Fragment>
+                            Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
+                            <br />
+                            <br />
+                            <br />
+                            Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                        </React.Fragment>
+                    } />
+                    <Skill title={"Algorithms"} projects={["Convolutional Neural Network", "Neural Network"]} description={
+                        <React.Fragment>
+                            Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
+                            
+                            <br />
+                            Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                        </React.Fragment>
+                    } />
+                    <Skill title={"Machine Learning"} projects={["Convolutional Neural Network", "Neural Network"]} description={
+                        <React.Fragment>
+                            Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
+                            <br />
+                            <br />
+                            Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                            <br />
+                            Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                        </React.Fragment>
+                    } />
+                </div>
             </section>
             <section id={"experience"}>
                 <h1>Experience</h1>
