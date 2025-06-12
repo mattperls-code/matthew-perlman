@@ -56,77 +56,194 @@ const Main = () => {
             <section id={"about"}>
                 <h1>About</h1>
                 <div>
-                    Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
-                    <br />
-                    <br />
-                    Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
-                    <br />
-                    <br />
-                    Sint dicat ne vis, ludus dolorum consectetuer cu pro. Vim eu delenit abhorreant, ei debitis corpora percipit mel, ne amet discere his. Per ut nonumy platonem. Libris assentior mea cu, est te elitr semper numquam. No stet adipisci eos, te pri consul urbanitas.
-                    <br />
-                    <br />
-                    Eu eum epicuri omittam voluptatum. Meis molestiae ne usu. Suas hinc tation vix cu. Nam vitae sensibus accusamus ut, ea duo omnis mollis, pro fabulas consetetur ea. Vitae aeterno nam ex, id amet eripuit tincidunt cum, vim dicunt bonorum incorrupte et.
-                    <br />
-                    <br />
-                    Accusam scaevola quo an, in sit noster antiopam. Eu molestie maluisset definitionem nec, sed inani dicam cu, at sea dictas evertitur consetetur. Eam no odio illud minimum. Et sit facilisi tractatos signiferumque, sumo volumus incorrupte no sit.
+                Hello, my name is Matt, and I'm a sophomore studying Computer Science at UMass Amherst.
+                <br /><br />
+                I love to program and am very passionate about computer graphics, robotics, and machine learning. I've been writing code for about 8 years now and I'm an adept problem solver across many fields. I've written parsers, neural networks, programming languages, and rendering engines all from scratch in C++ as well as award winning websites, chrome extensions, and mobiles apps using JavaScript and React.
+                <br /><br />
+                I've released several iOS mobile apps, done some professional freelance web development over the years, and am a founding member and the CTO of ClearContext, an AI powered tool to help identify and eliminate bias in online media.
+                <br /><br />
+                As a high schooler, I was the lead programmer and a driver for our FRC team, the Robolancers, and won the world championship in 2024. My two years of leadership on our 50+ person team taught me valuable soft skills about work management, delegation, dev ops, and communication as well as important technical skills like computer vision, control theory, and autonomous planning.
+                <br /><br />
+                I love building interesting and innovative projects, and am always looking for something new to learn about. Please reach out with any questions or ideas!
                 </div>
             </section>
             <section id={"projects"}>
                 <h1>Projects</h1>
-                <Project title={"Convolutional Neural Network"} images={["https://picsum.photos/400", "https://picsum.photos/500", "https://picsum.photos/400/600"]} languages={["C++"]} tags={["Machine Learning", "Algorithms", "Image Processing"]} description={
+                <Project title={"Convolutional Neural Network"} images={["assets/projects/cnn/img1.png", "assets/projects/cnn/img2.png", "assets/projects/cnn/img3.png"]} languages={[
+                    { id: "langs/cpp", label: "C++" }
+                ]} tags={[
+                    { id: "skills/ml", label: "Machine Learning" },
+                    { id: "skills/cv", label: "Computer Vision" },
+                    { id: "skills/cg", label: "Computer Graphics" },
+                    { id: "skills/alg", label: "Algorithms" },
+                    { id: "skills/swe", label: "Software Engineering" }
+                ]} description={
                     <React.Fragment>
-                        Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
-                        <br />
-                        <br />
-                        Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
-                        <br />
-                        <br />
-                        Sint dicat ne vis, ludus dolorum consectetuer cu pro. Vim eu delenit abhorreant, ei debitis corpora percipit mel, ne amet discere his. Per ut nonumy platonem. Libris assentior mea cu, est te elitr semper numquam. No stet adipisci eos, te pri consul urbanitas.
-                        <br />
-                        <br />
-                        Eu eum epicuri omittam voluptatum. Meis molestiae ne usu. Suas hinc tation vix cu. Nam vitae sensibus accusamus ut, ea duo omnis mollis, pro fabulas consetetur ea. Vitae aeterno nam ex, id amet eripuit tincidunt cum, vim dicunt bonorum incorrupte et.
-                        <br />
-                        <br />
-                        Accusam scaevola quo an, in sit noster antiopam. Eu molestie maluisset definitionem nec, sed inani dicam cu, at sea dictas evertitur consetetur. Eam no odio illud minimum. Et sit facilisi tractatos signiferumque, sumo volumus incorrupte no sit.
+                        TODO
                     </React.Fragment>
                 } />
-                <Project title={"Neural Network"} images={["https://picsum.photos/400", "https://picsum.photos/500"]} languages={["C++"]} tags={["Machine Learning", "Algorithms"]} description={
+                <Project title={"Neural Network"} images={["assets/projects/nn/img1.png", "assets/projects/nn/img2.png", "assets/projects/nn/img3.png", "assets/projects/nn/img4.png", "assets/projects/nn/img5.png"]} languages={[
+                    { id: "langs/cpp", label: "C++" }
+                ]} tags={[
+                    { id: "skills/ml", label: "Machine Learning" },
+                    { id: "skills/alg", label: "Algorithms" },
+                    { id: "skills/swe", label: "Software Engineering" }
+                ]} description={
                     <React.Fragment>
-                        Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
-                        <br />
-                        <br />
-                        Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
-                        <br />
+                        TODO
                     </React.Fragment>
                 } />
-                <Project title={"Convolutional Neural Network"} images={[]} languages={["C++", "Java", "Gnuplot"]} tags={["Machine Learning", "Algorithms", "Image Processing"]} description={
+                <Project title={"2024 FRC Robot"} images={["assets/projects/frc24/img1.png", "assets/projects/frc24/img2.png", "assets/projects/frc24/img3.png", "assets/projects/frc24/img4.png"]} languages={[
+                    { id: "langs/java", label: "Java" }
+                ]} tags={[
+                    { id: "skills/robo", label: "Robotics" },
+                    { id: "skills/cv", label: "Computer Vision" },
+                    { id: "skills/algs", label: "Algorithms" },
+                    { id: "skills/lead", label: "Team Leadership" },
+                    { id: "skills/swe", label: "Software Engineering" },
+                    { id: "skills/comm", label: "Communication" }
+                ]} description={
                     <React.Fragment>
-                        Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
-                        <br />
-                        <br />
-                        Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
-                        <br />
-                        Eu eum epicuri omittam voluptatum. Meis molestiae ne usu. Suas hinc tation vix cu. Nam vitae sensibus accusamus ut, ea duo omnis mollis, pro fabulas consetetur ea. Vitae aeterno nam ex, id amet eripuit tincidunt cum, vim dicunt bonorum incorrupte et.
-                        <br />
-                        <br />
-                        Accusam scaevola quo an, in sit noster antiopam. Eu molestie maluisset definitionem nec, sed inani dicam cu, at sea dictas evertitur consetetur. Eam no odio illud minimum. Et sit facilisi tractatos signiferumque, sumo volumus incorrupte no sit.
+                        TODO
                     </React.Fragment>
                 } />
-                <Project title={"Neural Network"} images={["https://picsum.photos/500"]} languages={["C++"]} tags={["Machine Learning", "Algorithms"]} description={
+                <Project title={"2023 FRC Robot"} images={["assets/projects/frc23/img1.png", "assets/projects/frc23/img2.png", "assets/projects/frc23/img3.png", "assets/projects/frc23/img4.png"]} languages={[
+                    { id: "langs/java", label: "Java" }
+                ]} tags={[
+                    { id: "skills/robo", label: "Robotics" },
+                    { id: "skills/cv", label: "Computer Vision" },
+                    { id: "skills/algs", label: "Algorithms" },
+                    { id: "skills/lead", label: "Team Leadership" },
+                    { id: "skills/swe", label: "Software Engineering" },
+                    { id: "skills/comm", label: "Communication" }
+                ]} description={
                     <React.Fragment>
-                        Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
-                        Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
-                        <br />
-                        <br />
-                        Sint dicat ne vis, ludus dolorum consectetuer cu pro. Vim eu delenit abhorreant, ei debitis corpora percipit mel, ne amet discere his. Per ut nonumy platonem. Libris assentior mea cu, est te elitr semper numquam. No stet adipisci eos, te pri consul urbanitas.
-                        <br />
-                        <br />
-                        Eu eum epicuri omittam voluptatum. Meis molestiae ne usu. Suas hinc tation vix cu. Nam vitae sensibus accusamus ut, ea duo omnis mollis, pro fabulas consetetur ea. Vitae aeterno nam ex, id amet eripuit tincidunt cum, vim dicunt bonorum incorrupte et.
-                        <br />
-                        <br />
-                        Accusam scaevola quo an, in sit noster antiopam. Eu molestie maluisset definitionem nec, sed inani dicam cu, at sea dictas evertitur consetetur. Eam no odio illud minimum. Et sit facilisi tractatos signiferumque, sumo volumus incorrupte no sit.
+                        TODO
                     </React.Fragment>
                 } />
+                <Project title={"Finite Automata"} images={["assets/projects/fa/img1.png", "assets/projects/fa/img2.png", "assets/projects/fa/img3.png"]} languages={[
+                    { id: "langs/cpp", label: "C++" },
+                    { id: "langs/tex", label: "LaTex" },
+                ]} tags={[
+                    { id: "skills/flt", label: "Formal Language Theory" },
+                    { id: "skills/regex", label: "Regular Expressions" },
+                    { id: "skills/parsing", label: "Parsing" },
+                    { id: "skills/alg", label: "Algorithms" },
+                    { id: "skills/swe", label: "Software Engineering" }
+                ]} description={
+                    <React.Fragment>
+                        TODO
+                    </React.Fragment>
+                } />
+                <Project title={"Parser"} images={[
+                    // TODO: xml -> json
+                ]} languages={[
+                    { id: "langs/cpp", label: "C++" }
+                ]} tags={[
+                    { id: "skills/parsing", label: "Parsing" },
+                    { id: "skills/alg", label: "Algorithms" },
+                    { id: "skills/swe", label: "Software Engineering" }
+                ]} description={
+                    <React.Fragment>
+                        TODO
+                    </React.Fragment>
+                } />
+                <Project title={"Platinum"} images={["assets/projects/platinum/img1.png", "assets/projects/platinum/img2.png", "assets/projects/platinum/img3.png"]} languages={[
+                    { id: "langs/cpp", label: "C++" }
+                ]} tags={[
+                    { id: "skills/parsing", label: "Parsing" },
+                    { id: "skills/alg", label: "Algorithms" },
+                    { id: "skills/swe", label: "Software Engineering" }
+                ]} description={
+                    <React.Fragment>
+                        TODO
+                    </React.Fragment>
+                } />
+                <Project title={"3D Function Renderer"} images={["assets/projects/3dfr/img1.png", "assets/projects/3dfr/img2.png", "assets/projects/3dfr/img3.png", "assets/projects/3dfr/img4.png"]} languages={[
+                    { id: "langs/cpp", label: "C++" }
+                ]} tags={[
+                    { id: "skills/cg", label: "Computer Graphics" },
+                    { id: "skills/alg", label: "Algorithms" },
+                ]} description={
+                    <React.Fragment>
+                        TODO
+                    </React.Fragment>
+                } />
+                <Project title={"One Line Ray Tracer"} images={["assets/projects/olrt/img1.png"]} languages={[
+                    { id: "langs/js", label: "Java Scripts" }
+                ]} tags={[
+                    { id: "skills/cg", label: "Computer Graphics" },
+                    { id: "skills/alg", label: "Algorithms" }
+                ]} description={
+                    <React.Fragment>
+                        TODO
+                    </React.Fragment>
+                } />
+                <Project title={"N-Body Simulator"} images={["assets/projects/n-body/img1.png", "assets/projects/n-body/img2.png", "assets/projects/n-body/img3.png"]} languages={[
+                    { id: "langs/js", label: "Java Script" }
+                ]} tags={[
+                    { id: "skills/cg", label: "Computer Graphics" }
+                ]} description={
+                    <React.Fragment>
+                        TODO
+                    </React.Fragment>
+                } />
+                <Project title={"Markov Chain Text Generator"} images={[
+                    // TODO
+                ]} languages={[
+                    { id: "langs/cpp", label: "C++" }
+                ]} tags={[
+                    { id: "skills/ml", label: "Machine Learning" },
+                    { id: "skills/algs", label: "Algorithms" }
+                ]} />
+                <Project title={"Clear Context"} images={["assets/projects/clearcontext/img1.png", "assets/projects/clearcontext/img2.png"]} languages={[
+                    { id: "langs/js", label: "Java Script + Type Script" },
+                    { id: "langs/html", label: "HTML + CSS" },
+                ]} tags={[
+                    { id: "skills/node", label: "Node" },
+                    { id: "skills/react", label: "React" },
+                    { id: "skills/ui", label: "UI / UX" },
+                    { id: "skills/hosting", label: "Hosting" },
+                    { id: "skills/extensions", label: "Chrome Extensions" },
+                    { id: "skills/scrape", label: "Web Scraping" },
+                    { id: "skills/alg", label: "Algorithms" },
+                    { id: "skills/swe", label: "Software Engineering" },
+                ]} />
+                <Project title={"Quote It"} images={["assets/projects/quoteit/img1.png"]} languages={[
+                    { id: "langs/js", label: "Java Script" }
+                ]} tags={[
+                    { id: "skills/react", label: "React Native" },
+                    { id: "skills/ui", label: "UI / UX" },
+                    { id: "skills/hosting", label: "Hosting" },
+                    { id: "skills/swe", label: "Software Engineering" },
+                ]} />
+                <Project title={"Quick Dodge"} images={["assets/projects/quickdodge/img1.png"]} languages={[
+                    { id: "langs/js", label: "Java Script" }
+                ]} tags={[
+                    { id: "skills/react", label: "React Native" },
+                    { id: "skills/ui", label: "UI / UX" },
+                    { id: "skills/cg", label: "Computer Graphics" },
+                    { id: "skills/hosting", label: "Hosting" },
+                    { id: "skills/swe", label: "Software Engineering" }
+                ]} />
+                <Project title={"Eureka"} images={["assets/projects/eureka/img1.png", "assets/projects/eureka/img2.png", "assets/projects/eureka/img3.png", "assets/projects/eureka/img4.png"]} languages={[
+                    { id: "langs/js", label: "Java Script" }
+                ]} tags={[
+                    { id: "skills/react", label: "React" },
+                    { id: "skills/ui", label: "UI / UX" },
+                    { id: "skills/swe", label: "Software Engineering" }
+                ]} />
+                <Project title={"Lancer Scout"} images={["assets/projects/lancerscout/img1.png", "assets/projects/lancerscout/img2.png", "assets/projects/lancerscout/img3.png"]} languages={[
+                    { id: "langs/js", label: "Java Script" }
+                ]} tags={[
+                    { id: "skills/node", label: "Node" },
+                    { id: "skills/react", label: "React" },
+                    { id: "skills/ui", label: "UI / UX" },
+                    { id: "skills/algs", label: "Algorithms" },
+                    { id: "skills/lead", label: "Team Leadership" },
+                    { id: "skills/swe", label: "Software Engineering" },
+                    { id: "skills/comm", label: "Communication" },
+                ]} />
             </section>
             <section id={"skills"}>
                 <h1>Skills</h1>

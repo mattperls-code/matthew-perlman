@@ -1,5 +1,5 @@
-$white: rgb(250, 250, 250);
-$light-grey: rgb(230, 230, 230);
+$white: rgb(255, 255, 255);
+$light-grey: rgb(240, 240, 240);
 $medium-grey: rgb(140, 140, 140);
 $dark-grey: rgb(60, 60, 60);
 $black: rgb(10, 10, 10);
@@ -130,6 +130,7 @@ section {
                 align-items: center;
 
                 .descriptor {
+                    text-decoration: none;
                     padding: 4px 8px;
                     margin: 4px;
                     border-radius: 4px;
@@ -174,7 +175,6 @@ section {
                 flex-wrap: nowrap;
                 width: 100%;
                 height: 30px;
-                margin-top: 10px;
 
                 .dot-focused {
                     width: 20px;
@@ -220,6 +220,7 @@ section {
                 align-items: center;
 
                 .descriptor {
+                    text-decoration: none;
                     padding: 4px 8px;
                     margin: 4px;
                     border-radius: 4px;
@@ -259,6 +260,7 @@ section {
                 align-items: center;
 
                 .descriptor {
+                    text-decoration: none;
                     padding: 4px 8px;
                     margin: 4px;
                     border-radius: 4px;
@@ -349,6 +351,7 @@ section {
                 align-items: center;
 
                 .descriptor {
+                    text-decoration: none;
                     padding: 4px 8px;
                     margin: 4px;
                     border-radius: 4px;

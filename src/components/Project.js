@@ -1,6 +1,8 @@
 import React, { useRef, useState, useEffect } from "react"
 import { useWindowSize } from "react-use"
 
+import { HashLink } from "react-router-hash-link"
+
 const Carousel = ({ images }) => {
     if (images.length == 0) return null
 
@@ -56,11 +58,11 @@ const Project = ({ title, images, languages, tags, description }) => {
 
     languages.forEach((language, index) => {
         languagesComponents.push(
-            <div key={index} className={"descriptor"}>
+            <HashLink key={index} to={"#" + language.id} className={"descriptor"}>
                 {
-                    language
+                    language.label
                 }
-            </div>
+            </HashLink>
         )
     })
 
@@ -68,11 +70,11 @@ const Project = ({ title, images, languages, tags, description }) => {
 
     tags.forEach((tag, index) => {
         tagsComponents.push(
-            <div key={index} className={"descriptor"}>
+            <HashLink key={index} to={"#" + tag.id} className={"descriptor"}>
                 {
-                    tag
+                    tag.label
                 }
-            </div>
+            </HashLink>
         )
     })
 

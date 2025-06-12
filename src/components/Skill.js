@@ -1,15 +1,17 @@
 import React from "react"
 
+import { HashLink } from "react-router-hash-link"
+
 const Skill = ({ title, description, projects }) => {
     const projectComponents = []
 
     projects.forEach((project, index) => {
         projectComponents.push(
-            <div key={index} className={"descriptor"}>
+            <HashLink key={index} to={"#" + project.id} className={"descriptor"}>
                 {
-                    project
+                    project.label
                 }
-            </div>
+            </HashLink>
         )
     })
 
