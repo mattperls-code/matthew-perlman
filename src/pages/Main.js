@@ -6,10 +6,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithubSquare, faInstagramSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faSquareEnvelope } from "@fortawesome/free-solid-svg-icons"
 
+import Education from "../components/Education"
+import Experience from "../components/Experience"
 import Project from "../components/Project"
 import Skill from "../components/Skill"
-import Experience from "../components/Experience"
-import Education from "../components/Education"
 
 const Main = () => {
     const langs = {
@@ -72,13 +72,13 @@ const Main = () => {
             <nav>
                 <HashLink smooth to={"#about"}>About</HashLink>
                 <div className={"divider"} />
-                <HashLink smooth to={"#projects"}>Projects</HashLink>
-                <div className={"divider"} />
-                <HashLink smooth to={"#skills"}>Skills</HashLink>
+                <HashLink smooth to={"#education"}>Education</HashLink>
                 <div className={"divider"} />
                 <HashLink smooth to={"#experience"}>Experience</HashLink>
                 <div className={"divider"} />
-                <HashLink smooth to={"#education"}>Education</HashLink>
+                <HashLink smooth to={"#projects"}>Projects</HashLink>
+                <div className={"divider"} />
+                <HashLink smooth to={"#skills"}>Skills</HashLink>
             </nav>
             <main>
                 <img src={"assets/me.jpg"} />
@@ -121,6 +121,90 @@ const Main = () => {
                 <br /><br />
                 I love building interesting and innovative projects, and am always looking for something new to learn about. Please reach out with any questions or ideas!
                 </div>
+            </section>
+            <section id={"education"}>
+                <h1>Education</h1>
+
+                <div className={"education-container"}>
+                    <Education title={"UMass Amherst Undergrad"} description={
+                        <React.Fragment>
+                            Overal GPA: 3.932
+                            <br />
+                            Major GPA: 3.889
+                            <br /><br />
+                            Currently I am a sophomore at the University of Massachusetts Amherst studying Computer Science.
+                            <br /><br />
+                            I plan to graduate with a B.S. in 2027 and a M.S. in 2028.
+                        </React.Fragment>
+                    } />
+                    
+                    <Education title={"Central High School"} description={
+                        <React.Fragment>
+                            Unweighted GPA: 3.87
+                            <br />
+                            Weighted GPA: 4.33
+                            <br /><br />
+                            I attended Central High School from 2020-2024 with a class size of roughly 600 students.
+                            <br /><br />
+                            I graduated with the highest Honor Roll and received the Barnwell Service Award, the Alexander Dallas Bache Science Prize (for Physics), and the Barry R. Bloom Prize (for Science).
+                        </React.Fragment>
+                    } />
+                </div>
+            </section>
+            <section id={"experience"}>
+                <h1>Experience</h1>
+
+                <Experience title={"RoboLancers Lead Programmer (2022 - 2024)"} images={generateImageArr("assets/experience/frc-prog-lead", 5)} projects={[
+                    projects.frc24,
+                    projects.frc23,
+                    projects.lancerscout
+                ]} tags={[
+                    langs.java,
+                    skills.cv,
+                    skills.robo,
+                    skills.alg,
+                    skills.lead,
+                    skills.swe,
+                    skills.comm
+                ]} description={
+                    <React.Fragment>
+                        In 2023, my second year as a programmer on the RoboLancers, I was elected programming lead.
+                        This meant I was in charge of delivering functional robot code, managing my team of 10+ programmers, and communicating with mechnical, CAD, and electrical leads.
+                        <br /><br />
+                        I oversaw the development of our robot that year, helping my programmers implement complicated PID controllers for the robot's arm and self balancing, inverse kinematics for joint angles, computer vision and odometry for feedback, and autonomous path following.
+                        <br /><br />
+                        While our end robot wasn't perfect that season, our team learned a lot and I had carved out a strong team of programmers for next year.
+                        <br /><br />
+                        In 2024, I maintained my position as the lead programmer, and my team shrunk to 5-10 strong programmers.
+                        <br /><br />
+                        Before our main season began, I led our team through building a scouting suite, Lancer Scout, which we later used for strategy in competitions.
+                        <br /><br />
+                        When the main season arrived, I managed our team as we built an automatic object collector using vision, automatic scoring, and complex multistep autonomous path following procedures.
+                        <br /><br />
+                        With a sharp team of engineers and programmers and a ton of luck, we ultimately made it to the World Championship and won.
+                    </React.Fragment>
+                } />
+
+                <Experience title={"RoboLancers Programmer (2021 - 2022)"} images={generateImageArr("assets/experience/frc-prog", 2)} projects={[]} tags={[
+                    langs.java,
+                    skills.cv,
+                    skills.robo,
+                    skills.alg,
+                    skills.swe,
+                    skills.comm
+                ]} description={
+                    <React.Fragment>
+                        I joined the RoboLancers as a freshman in 2020 during covid. Because of the pandemic, a lot of the roles were fuzzy and I wasn't officially a programmer for the team until 2021.
+                        <br /><br />
+                        In 2021, I skipped our school's FTC team and jumped directly into FRC (think skipping JV for Varsity if you aren't familiar with FIRST).
+                        <br /><br />
+                        While there, I was introduced to a team of returning programmers and given the task of finding some way to help contribute to the team's robot.
+                        It didn't take me long to find something I wanted to build, and I immediately began working on an automatic shooter and vision system for our team's dodgeball-style robot.
+                        After finishing the shooting, I helped some of my other teammates program the climbing mechanism, autonomous motion paths, and controls.
+                        <br /><br />
+                        By the end of the year, I had taught myself most of the framework we were using, learned how to use vision data, and was in charge of tuning most of our motor PIDs.
+                    </React.Fragment>
+                } />
             </section>
             <section id={"projects"}>
                 <h1>Projects</h1>
@@ -758,90 +842,6 @@ const Main = () => {
                             For me, my first two or so years programming had been solo. By joining a team during high school, it pushed me to develop better soft skills and effectively communicate with other programmers as well as people who don't write code.
                             <br /><br />
                             By spending four years in this environment, I became a strong communicator capable of interacting with technical and non-technical teammates to deliver the best end result possible.
-                        </React.Fragment>
-                    } />
-                </div>
-            </section>
-            <section id={"experience"}>
-                <h1>Experience</h1>
-
-                <Experience title={"RoboLancers Lead Programmer (2022 - 2024)"} images={generateImageArr("assets/experience/frc-prog-lead", 5)} projects={[
-                    projects.frc24,
-                    projects.frc23,
-                    projects.lancerscout
-                ]} tags={[
-                    langs.java,
-                    skills.cv,
-                    skills.robo,
-                    skills.alg,
-                    skills.lead,
-                    skills.swe,
-                    skills.comm
-                ]} description={
-                    <React.Fragment>
-                        In 2023, my second year as a programmer on the RoboLancers, I was elected programming lead.
-                        This meant I was in charge of delivering functional robot code, managing my team of 10+ programmers, and communicating with mechnical, CAD, and electrical leads.
-                        <br /><br />
-                        I oversaw the development of our robot that year, helping my programmers implement complicated PID controllers for the robot's arm and self balancing, inverse kinematics for joint angles, computer vision and odometry for feedback, and autonomous path following.
-                        <br /><br />
-                        While our end robot wasn't perfect that season, our team learned a lot and I had carved out a strong team of programmers for next year.
-                        <br /><br />
-                        In 2024, I maintained my position as the lead programmer, and my team shrunk to 5-10 strong programmers.
-                        <br /><br />
-                        Before our main season began, I led our team through building a scouting suite, Lancer Scout, which we later used for strategy in competitions.
-                        <br /><br />
-                        When the main season arrived, I managed our team as we built an automatic object collector using vision, automatic scoring, and complex multistep autonomous path following procedures.
-                        <br /><br />
-                        With a sharp team of engineers and programmers and a ton of luck, we ultimately made it to the World Championship and won.
-                    </React.Fragment>
-                } />
-
-                <Experience title={"RoboLancers Programmer (2021 - 2022)"} images={generateImageArr("assets/experience/frc-prog", 2)} projects={[]} tags={[
-                    langs.java,
-                    skills.cv,
-                    skills.robo,
-                    skills.alg,
-                    skills.swe,
-                    skills.comm
-                ]} description={
-                    <React.Fragment>
-                        I joined the RoboLancers as a freshman in 2020 during covid. Because of the pandemic, a lot of the roles were fuzzy and I wasn't officially a programmer for the team until 2021.
-                        <br /><br />
-                        In 2021, I skipped our school's FTC team and jumped directly into FRC (think skipping JV for Varsity if you aren't familiar with FIRST).
-                        <br /><br />
-                        While there, I was introduced to a team of returning programmers and given the task of finding some way to help contribute to the team's robot.
-                        It didn't take me long to find something I wanted to build, and I immediately began working on an automatic shooter and vision system for our team's dodgeball-style robot.
-                        After finishing the shooting, I helped some of my other teammates program the climbing mechanism, autonomous motion paths, and controls.
-                        <br /><br />
-                        By the end of the year, I had taught myself most of the framework we were using, learned how to use vision data, and was in charge of tuning most of our motor PIDs.
-                    </React.Fragment>
-                } />
-            </section>
-            <section id={"education"}>
-                <h1>Education</h1>
-
-                <div className={"education-container"}>
-                    <Education title={"UMass Amherst Undergrad"} description={
-                        <React.Fragment>
-                            Overal GPA: 3.932
-                            <br />
-                            Major GPA: 3.889
-                            <br /><br />
-                            Currently I am a sophomore at the University of Massachusetts Amherst studying Computer Science.
-                            <br /><br />
-                            I plan to graduate with a B.S. in 2027 and a M.S. in 2028.
-                        </React.Fragment>
-                    } />
-                    
-                    <Education title={"Central High School"} description={
-                        <React.Fragment>
-                            Unweighted GPA: 3.87
-                            <br />
-                            Weighted GPA: 4.33
-                            <br /><br />
-                            I attended Central High School from 2020-2024 with a class size of roughly 600 students.
-                            <br /><br />
-                            I graduated with the highest Honor Roll and received the Barnwell Service Award, the Alexander Dallas Bache Science Prize (for Physics), and the Barry R. Bloom Prize (for Science).
                         </React.Fragment>
                     } />
                 </div>

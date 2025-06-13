@@ -35,13 +35,27 @@ const Carousel = ({ images }) => {
 
     const itemWidth = Math.min(600, width - 80)
 
+    let timer = null
+    
+    const handleScroll = (e) => {
+        if (timer != null) clearTimeout(timer)
+
+        timer = setTimeout(() => {
+            const scrollIndex = Math.round(e.target.scrollLeft / itemWidth)
+
+            if (scrollIndex == focusIndex) carouselRef.current.scrollTo({ left: focusIndex * itemWidth, behavior: "smooth" })
+
+            else setFocusIndex(scrollIndex)
+        }, 250)
+    }
+
     useEffect(() => {
         carouselRef.current.scrollTo({ left: focusIndex * itemWidth, behavior: "smooth" })
     }, [focusIndex])
 
     return (
         <div className={"carousel"}>
-            <div ref={carouselRef} className={"images"}>
+            <div ref={carouselRef} onScroll={handleScroll} className={"images"}>
                 {
                     imageComponents
                 }

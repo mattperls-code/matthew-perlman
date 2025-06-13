@@ -102,118 +102,15 @@ section {
     }
 }
 
-#projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .project {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-evenly;
-        width: fit-content;
-
-        h2 {
-            a {
-                text-decoration: none;
-                margin-left: 8px;
-                color: $medium-grey;
-                font-size: 20px;
-            }
-        }
-        
-        .info {
-            width: 600px;
-            max-width: calc(100vw - 80px);
-            padding: 20px;
-            border-radius: 10px;
-            border: 2px dashed $light-grey;
-            margin: 20px;
-
-            .descriptors {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                align-items: center;
-
-                .descriptor {
-                    text-decoration: none;
-                    padding: 4px 8px;
-                    margin: 4px;
-                    border-radius: 4px;
-                    background-color: $light-grey;
-                    color: $dark-grey;
-                }
-            }
-
-            .description {
-                margin-top: 10px;
-                color: $dark-grey;
-            }
-        }
-
-        .carousel {
-            display: flex;
-            flex-direction: column;
-            width: 600px;
-            height: 450px;
-            max-width: calc(100vw - 80px);
-            max-height: calc(0.75 * (100vw - 80px));
-            margin: 20px;
-
-            .images {
-                flex: 1;
-                overflow: hidden;
-                white-space: nowrap;
-
-                img {
-                    display: inline-block;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                }
-            }
-
-            .controls {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                flex-wrap: nowrap;
-                width: 100%;
-                height: 30px;
-
-                .dot-focused {
-                    width: 20px;
-                    height: 20px;
-                    border-radius: 50%;
-                    margin: 0 10px;
-                    background-color: $dark-grey;
-                }
-
-                .dot-unfocused {
-                    width: 14px;
-                    height: 14px;
-                    border-radius: 50%;
-                    margin: 0 10px;
-                    background-color: $medium-grey;
-                }
-            }
-        }
-    }
-}
-
-#skills {
-    .skills-container {
+#education {
+    .education-container {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
 
-        .skill {
+        .education {
             width: 320px;
             max-width: calc(100vw - 80px);
             padding: 20px;
@@ -295,7 +192,8 @@ section {
 
             .images {
                 flex: 1;
-                overflow: hidden;
+                overflow-x: auto;
+                overflow-y: hidden;
                 white-space: nowrap;
 
                 img {
@@ -304,6 +202,10 @@ section {
                     height: 100%;
                     object-fit: contain;
                 }
+            }
+
+            .images::-webkit-scrollbar {
+                display: none;
             }
 
             .controls {
@@ -336,15 +238,123 @@ section {
     }
 }
 
-#education {
-    .education-container {
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .project {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        width: fit-content;
+
+        h2 {
+            a {
+                text-decoration: none;
+                margin-left: 8px;
+                color: $medium-grey;
+                font-size: 20px;
+            }
+        }
+        
+        .info {
+            width: 600px;
+            max-width: calc(100vw - 80px);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px dashed $light-grey;
+            margin: 20px;
+
+            .descriptors {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+
+                .descriptor {
+                    text-decoration: none;
+                    padding: 4px 8px;
+                    margin: 4px;
+                    border-radius: 4px;
+                    background-color: $light-grey;
+                    color: $dark-grey;
+                }
+            }
+
+            .description {
+                margin-top: 10px;
+                color: $dark-grey;
+            }
+        }
+
+        .carousel {
+            display: flex;
+            flex-direction: column;
+            width: 600px;
+            height: 450px;
+            max-width: calc(100vw - 80px);
+            max-height: calc(0.75 * (100vw - 80px));
+            margin: 20px;
+
+            .images {
+                flex: 1;
+                overflow-x: auto;
+                overflow-y: hidden;
+                white-space: nowrap;
+
+                img {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .images::-webkit-scrollbar {
+                display: none;
+            }
+
+            .controls {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: nowrap;
+                width: 100%;
+                height: 30px;
+
+                .dot-focused {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    margin: 0 10px;
+                    background-color: $dark-grey;
+                }
+
+                .dot-unfocused {
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    margin: 0 10px;
+                    background-color: $medium-grey;
+                }
+            }
+        }
+    }
+}
+
+#skills {
+    .skills-container {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
 
-        .education {
+        .skill {
             width: 320px;
             max-width: calc(100vw - 80px);
             padding: 20px;
