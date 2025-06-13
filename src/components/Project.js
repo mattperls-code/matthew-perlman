@@ -2,6 +2,8 @@ import React, { useRef, useState, useEffect } from "react"
 import { useWindowSize } from "react-use"
 
 import { HashLink } from "react-router-hash-link"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faLink } from "@fortawesome/free-solid-svg-icons"
 
 const Carousel = ({ images }) => {
     if (images.length == 0) return null
@@ -84,6 +86,9 @@ const Project = ({ info, images, languages, tags, description }) => {
                 <h2>
                     {
                         info.label
+                    }
+                    {
+                        info.url && <a target={"_blank"} href={info.url}><FontAwesomeIcon icon={faLink} /></a>
                     }
                 </h2>
                 {

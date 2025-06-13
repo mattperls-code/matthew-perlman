@@ -114,6 +114,15 @@ section {
         align-items: center;
         justify-content: space-evenly;
         width: fit-content;
+
+        h2 {
+            a {
+                text-decoration: none;
+                margin-left: 8px;
+                color: $medium-grey;
+                font-size: 20px;
+            }
+        }
         
         .info {
             width: 600px;

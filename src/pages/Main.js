@@ -41,22 +41,22 @@ const Main = () => {
     }
 
     const projects = {
-        cnn: { id: "projects/cnn", label: "Convolutional Neural Network" },
-        nn: { id: "projects/nn", label: "Neural Network" },
-        frc24: { id: "projects/frc24", label: "2024 FRC Robot" },
-        frc23: { id: "projects/frc23", label: "2023 FRC Robot" },
-        fa: { id: "projects/fa", label: "Finite Automata" },
-        parser: { id: "projects/parser", label: "Parser" },
-        platinum: { id: "projects/platinum", label: "Platinum" },
-        fn3d: { id: "projects/fn3d", label: "3D Function Renderer" },
-        olrt: { id: "projects/olrt", label: "One Line Ray Tracer" },
-        nbody: { id: "projects/nbody", label: "N-Body Simulator" },
-        textgen: { id: "projects/textgen", label: "Markov Chain Text Generator" },
-        clearcontext: { id: "projects/clearcontext", label: "Clear Context" },
-        quoteit: { id: "projects/quoteit", label: "Quote It" },
-        quickdodge: { id: "projects/quickdodge", label: "Quick Dodge" },
-        eureka: { id: "projects/eureka", label: "Eureka" },
-        lancerscout: { id: "projects/lancerscout", label: "Lancer Scout" }
+        cnn: { id: "projects/cnn", label: "Convolutional Neural Network", url: "https://github.com/mattperls-code/convolutional-neural-network" },
+        nn: { id: "projects/nn", label: "Neural Network", url: "https://github.com/mattperls-code/neural-network" },
+        frc24: { id: "projects/frc24", label: "2024 FRC Robot", url: "https://github.com/RoboLancers/321-Crescendo-2024" },
+        frc23: { id: "projects/frc23", label: "2023 FRC Robot", url: "https://github.com/RoboLancers/FRC-Main-2023" },
+        fa: { id: "projects/fa", label: "Finite Automata", url: "https://github.com/mattperls-code/finite-automata" },
+        parser: { id: "projects/parser", label: "Parser", url: "https://github.com/mattperls-code/parser" },
+        platinum: { id: "projects/platinum", label: "Platinum", url: "https://github.com/mattperls-code/platinum" },
+        fn3d: { id: "projects/fn3d", label: "3D Function Renderer", url: "https://github.com/mattperls-code/3d-function-renderer" },
+        olrt: { id: "projects/olrt", label: "One Line Ray Tracer", url: "https://github.com/mattperls-code/one-line-ray-tracer" },
+        nbody: { id: "projects/nbody", label: "N-Body Simulator", url: "https://github.com/mattperls-code/n-body-simulator" },
+        textgen: { id: "projects/textgen", label: "Markov Chain Text Generator", url: "https://github.com/mattperls-code/probabilistic-text-generator" },
+        clearcontext: { id: "projects/clearcontext", label: "Clear Context", url: "https://clearcontext.co/" },
+        quoteit: { id: "projects/quoteit", label: "Quote It", url: "https://apps.apple.com/us/app/quote-it/id1628678287" },
+        quickdodge: { id: "projects/quickdodge", label: "Quick Dodge", url: "https://apps.apple.com/us/app/quick-dodge/id1517218313" },
+        eureka: { id: "projects/eureka", label: "Eureka", url: "https://eureka-mattperls-code.vercel.app/" },
+        lancerscout: { id: "projects/lancerscout", label: "Lancer Scout", url: "https://github.com/RoboLancers/lancer-scout" }
     }
 
     const generateImageArr = (path, count) => {
@@ -135,7 +135,11 @@ const Main = () => {
                     skills.swe
                 ]} description={
                     <React.Fragment>
-                        TODO
+                        A fully featured convolutional neural network class built without any math or machine learning libraries.
+                        <br /><br />
+                        The CNN class has easy wrappers for building, initializing, training, and evaluating models with custom layer structure, activations, and output dimensions.
+                        <br /><br />
+                        The demo images show the model structure and training results for an MNIST hand written digits classifier implemented using the CNN class.
                     </React.Fragment>
                 } />
 
@@ -147,7 +151,11 @@ const Main = () => {
                     skills.swe
                 ]} description={
                     <React.Fragment>
-                        TODO
+                        A flexible neural network class made without any libraries for math or machine learning.
+                        <br /><br />
+                        The NN class manages constructing new networks, randomizing parameters, training using back propagation, and making feedforward predictions.
+                        <br /><br />
+                        The demo images show various models implemented with the NN class that approximate different functions, shapes, and regions.
                     </React.Fragment>
                 } />
 
@@ -162,7 +170,14 @@ const Main = () => {
                     skills.comm
                 ]} description={
                     <React.Fragment>
-                        TODO
+                        The RoboLancers 2024 robot, Da Pinchy.
+                        <br /><br />
+                        Da Pincy was programmed by me and my team in Java on my high school robotics team.
+                        <br /><br />
+                        Da Pincy uses a custom vision pipeline to automatically detect and intake rings on the floor.
+                        It can also follow complex autonomous paths and align to targets on the field using a blended odometry/vision approach.
+                        The shooter dynamically adjusts its angle and speed to hit variable distance shots automatically based on visual cues.
+                        The drive, arm, and flywheel motors all feature custom PID control to ensure fast and accurate motion.
                     </React.Fragment>
                 } />
 
@@ -177,7 +192,13 @@ const Main = () => {
                     skills.comm
                 ]} description={
                     <React.Fragment>
-                        TODO
+                        The RoboLancers 2023 robot, Lucy.
+                        <br /><br />
+                        Lucy was programmed by me and my team in Java on my high school robotics team.
+                        <br /><br />
+                        Lucy uses a large 3 segment arm to pickup and place various items on the field.
+                        To control this very heavy machinary, we used custom PID on all the arm motors as well as inverse kinematics to determine joint angles.
+                        It also uses a vision pipeline combined with odometry to follow complex autonomous motion paths.
                     </React.Fragment>
                 } />
 
@@ -192,7 +213,11 @@ const Main = () => {
                     skills.swe
                 ]} description={
                     <React.Fragment>
-                        TODO
+                        A powerful toolkit for evaluating, analyzing, and converting finite automata and regular expressions.
+                        <br /><br />
+                        The FiniteAutomata class can compare different languages, evaluate strings for membership, and convert between various subtypes of finite automata and regular expression.
+                        These conversions include transitions between literal expression strings, regular expressions, lambda NFAs, NFAs, DFAs, and min DFAs.
+                        The project also supports multiple export options, allowing for easy integration with LaTex, PDFs, and images.
                     </React.Fragment>
                 } />
 
@@ -204,7 +229,11 @@ const Main = () => {
                     skills.swe
                 ]} description={
                     <React.Fragment>
-                        TODO
+                        A parser combinator library that uses many standard combinators in order to make easy top down parsers.
+                        <br /><br />
+                        The library supports combinators for parsing sequences, repetitions, optional tokens, string literals, and many others to make defining grammars as easy as possible.
+                        <br /><br />
+                        The demo images show an example XML file which was parsed using the library, but the project can extend to parsing any context free grammar.
                     </React.Fragment>
                 } />
 
@@ -216,7 +245,12 @@ const Main = () => {
                     skills.swe
                 ]} description={
                     <React.Fragment>
-                        TODO
+                        An interpreted programming language built on a custom LL(1) style parser and runtime.
+                        <br /><br />
+                        Platinum is a strict but dynamically typed language with syntax similar to that of Java Script.
+                        It supports both primitive and non-primitive types, including arrays, maps, and functions.
+                        <br /><br />
+                        The standard library supports IO, math operations, file system calls, type conversions, and other basic utilities.
                     </React.Fragment>
                 } />
 
@@ -584,7 +618,7 @@ const Main = () => {
             </section>
             <section id={"experience"}>
                 <h1>Experience</h1>
-                
+
                 <Experience title={"RoboLancers Lead Programmer (2022 - 2024)"} images={generateImageArr("assets/experience/frc-prog-lead", 5)} projects={[
                     projects.frc24,
                     projects.frc23,
