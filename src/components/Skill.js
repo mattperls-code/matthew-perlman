@@ -2,12 +2,12 @@ import React from "react"
 
 import { HashLink } from "react-router-hash-link"
 
-const Skill = ({ title, description, projects }) => {
+const Skill = ({ info, description, projects }) => {
     const projectComponents = []
 
     projects.forEach((project, index) => {
         projectComponents.push(
-            <HashLink key={index} to={"#" + project.id} className={"descriptor"}>
+            <HashLink smooth key={index} to={"#" + project.id} className={"descriptor"}>
                 {
                     project.label
                 }
@@ -16,10 +16,10 @@ const Skill = ({ title, description, projects }) => {
     })
 
     return (
-        <article className={"skill"}>
+        <article id={info.id} className={"skill"}>
             <h2>
                 {
-                    title
+                    info.label
                 }
             </h2>
             <div className={"description"}>

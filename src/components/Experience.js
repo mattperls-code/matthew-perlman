@@ -58,7 +58,7 @@ const Experience = ({ title, images, projects, tags, description }) => {
 
     projects.forEach((project, index) => {
         projectsComponents.push(
-            <HashLink key={index} to={"#" + project.id} className={"descriptor"}>
+            <HashLink smooth key={index} to={"#" + project.id} className={"descriptor"}>
                 {
                     project.label
                 }
@@ -70,7 +70,7 @@ const Experience = ({ title, images, projects, tags, description }) => {
 
     tags.forEach((tag, index) => {
         tagsComponents.push(
-            <HashLink key={index} to={"#" + tag.id} className={"descriptor"}>
+            <HashLink smooth key={index} to={"#" + tag.id} className={"descriptor"}>
                 {
                     tag.label
                 }

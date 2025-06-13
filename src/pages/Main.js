@@ -12,6 +12,61 @@ import Experience from "../components/Experience"
 import Education from "../components/Education"
 
 const Main = () => {
+    const langs = {
+        cpp: { id: "langs/cpp", label: "C++" },
+        java: { id: "langs/java", label: "Java" },
+        js_ts: { id: "langs/js_ts", label: "Java Script / Type Script" },
+        html_css: { id: "langs/html_css", label: "HTML + CSS" },
+        tex: { id: "langs/tex", label: "LaTex" }
+    }
+
+    const skills = {
+        ml: { id: "skills/ml", label: "Machine Learning" },
+        flt: { id: "skills/flt", label: "Formal Language Theory" },
+        regex: { id: "skills/regex", label: "Regular Expressions" },
+        parsing: { id: "skills/parsing", label: "Parsing" },
+        cv: { id: "skills/cv", label: "Computer Vision" },
+        cg : { id: "skills/cg", label: "Computer Graphics" },
+        robo : { id: "skills/robo", label: "Robotics" },
+        scraping : { id: "skills/scraping", label: "Web Scraping" },
+        alg : { id: "skills/alg", label: "Algorithms" },
+        ui : { id: "skills/ui", label: "UI / UX" },
+        node : { id: "skills/node", label: "NodeJS" },
+        react : { id: "skills/react", label: "React / React Native" },
+        hosting : { id: "skills/hosting", label: "Hosting" },
+        extensions : { id: "skills/extensions", label: "Chrome Extensions" },
+        lead : { id: "skills/lead", label: "Team Leadership" },
+        swe : { id: "skills/swe", label: "Software Engineering" },
+        comm : { id: "skills/comm", label: "Communication" }
+    }
+
+    const projects = {
+        cnn: { id: "projects/cnn", label: "Convolutional Neural Network" },
+        nn: { id: "projects/nn", label: "Neural Network" },
+        frc24: { id: "projects/frc24", label: "2024 FRC Robot" },
+        frc23: { id: "projects/frc23", label: "2023 FRC Robot" },
+        fa: { id: "projects/fa", label: "Finite Automata" },
+        parser: { id: "projects/parser", label: "Parser" },
+        platinum: { id: "projects/platinum", label: "Platinum" },
+        fn3d: { id: "projects/fn3d", label: "3D Function Renderer" },
+        olrt: { id: "projects/olrt", label: "One Line Ray Tracer" },
+        nbody: { id: "projects/nbody", label: "N-Body Simulator" },
+        textgen: { id: "projects/textgen", label: "Markov Chain Text Generator" },
+        clearcontext: { id: "projects/clearcontext", label: "Clear Context" },
+        quoteit: { id: "projects/quoteit", label: "Quote It" },
+        quickdodge: { id: "projects/quickdodge", label: "Quick Dodge" },
+        eureka: { id: "projects/eureka", label: "Eureka" },
+        lancerscout: { id: "projects/lancerscout", label: "Lancer Scout" }
+    }
+
+    const generateImageArr = (path, count) => {
+        const imageArr = []
+
+        for (let i = 1;i<=count;i++) imageArr.push(path + "/img" + i + ".png")
+
+        return imageArr
+    }
+
     return (
         <React.Fragment>
             <nav>
@@ -69,286 +124,520 @@ const Main = () => {
             </section>
             <section id={"projects"}>
                 <h1>Projects</h1>
-                <Project title={"Convolutional Neural Network"} images={["assets/projects/cnn/img1.png", "assets/projects/cnn/img2.png", "assets/projects/cnn/img3.png"]} languages={[
-                    { id: "langs/cpp", label: "C++" }
+
+                <Project info={projects.cnn} images={generateImageArr("assets/projects/cnn", 3)} languages={[
+                    langs.cpp
                 ]} tags={[
-                    { id: "skills/ml", label: "Machine Learning" },
-                    { id: "skills/cv", label: "Computer Vision" },
-                    { id: "skills/cg", label: "Computer Graphics" },
-                    { id: "skills/alg", label: "Algorithms" },
-                    { id: "skills/swe", label: "Software Engineering" }
+                    skills.ml,
+                    skills.cv,
+                    skills.cg,
+                    skills.alg,
+                    skills.swe
                 ]} description={
                     <React.Fragment>
                         TODO
                     </React.Fragment>
                 } />
-                <Project title={"Neural Network"} images={["assets/projects/nn/img1.png", "assets/projects/nn/img2.png", "assets/projects/nn/img3.png", "assets/projects/nn/img4.png", "assets/projects/nn/img5.png"]} languages={[
-                    { id: "langs/cpp", label: "C++" }
+
+                <Project info={projects.nn} images={generateImageArr("assets/projects/nn", 5)} languages={[
+                    langs.cpp
                 ]} tags={[
-                    { id: "skills/ml", label: "Machine Learning" },
-                    { id: "skills/alg", label: "Algorithms" },
-                    { id: "skills/swe", label: "Software Engineering" }
+                    skills.ml,
+                    skills.alg,
+                    skills.swe
                 ]} description={
                     <React.Fragment>
                         TODO
                     </React.Fragment>
                 } />
-                <Project title={"2024 FRC Robot"} images={["assets/projects/frc24/img1.png", "assets/projects/frc24/img2.png", "assets/projects/frc24/img3.png", "assets/projects/frc24/img4.png"]} languages={[
-                    { id: "langs/java", label: "Java" }
+
+                <Project info={projects.frc24} images={generateImageArr("assets/projects/frc24", 4)} languages={[
+                    langs.java
                 ]} tags={[
-                    { id: "skills/robo", label: "Robotics" },
-                    { id: "skills/cv", label: "Computer Vision" },
-                    { id: "skills/algs", label: "Algorithms" },
-                    { id: "skills/lead", label: "Team Leadership" },
-                    { id: "skills/swe", label: "Software Engineering" },
-                    { id: "skills/comm", label: "Communication" }
+                    skills.robo,
+                    skills.cv,
+                    skills.alg,
+                    skills.lead,
+                    skills.swe,
+                    skills.comm
                 ]} description={
                     <React.Fragment>
                         TODO
                     </React.Fragment>
                 } />
-                <Project title={"2023 FRC Robot"} images={["assets/projects/frc23/img1.png", "assets/projects/frc23/img2.png", "assets/projects/frc23/img3.png", "assets/projects/frc23/img4.png"]} languages={[
-                    { id: "langs/java", label: "Java" }
+
+                <Project info={projects.frc23} images={generateImageArr("assets/projects/frc23", 4)} languages={[
+                    langs.java
                 ]} tags={[
-                    { id: "skills/robo", label: "Robotics" },
-                    { id: "skills/cv", label: "Computer Vision" },
-                    { id: "skills/algs", label: "Algorithms" },
-                    { id: "skills/lead", label: "Team Leadership" },
-                    { id: "skills/swe", label: "Software Engineering" },
-                    { id: "skills/comm", label: "Communication" }
+                    skills.robo,
+                    skills.cv,
+                    skills.alg,
+                    skills.lead,
+                    skills.swe,
+                    skills.comm
                 ]} description={
                     <React.Fragment>
                         TODO
                     </React.Fragment>
                 } />
-                <Project title={"Finite Automata"} images={["assets/projects/fa/img1.png", "assets/projects/fa/img2.png", "assets/projects/fa/img3.png"]} languages={[
-                    { id: "langs/cpp", label: "C++" },
-                    { id: "langs/tex", label: "LaTex" },
+
+                <Project info={projects.fa} images={generateImageArr("assets/projects/fa", 3)} languages={[
+                    langs.cpp,
+                    langs.tex
                 ]} tags={[
-                    { id: "skills/flt", label: "Formal Language Theory" },
-                    { id: "skills/regex", label: "Regular Expressions" },
-                    { id: "skills/parsing", label: "Parsing" },
-                    { id: "skills/alg", label: "Algorithms" },
-                    { id: "skills/swe", label: "Software Engineering" }
+                    skills.flt,
+                    skills.regex,
+                    skills.parsing,
+                    skills.alg,
+                    skills.swe
                 ]} description={
                     <React.Fragment>
                         TODO
                     </React.Fragment>
                 } />
-                <Project title={"Parser"} images={[
-                    // TODO: xml -> json
-                ]} languages={[
-                    { id: "langs/cpp", label: "C++" }
+
+                <Project info={projects.parser} images={generateImageArr("assets/projects/parser", 1)} languages={[
+                    langs.cpp
                 ]} tags={[
-                    { id: "skills/parsing", label: "Parsing" },
-                    { id: "skills/alg", label: "Algorithms" },
-                    { id: "skills/swe", label: "Software Engineering" }
+                    skills.parsing,
+                    skills.alg,
+                    skills.swe
                 ]} description={
                     <React.Fragment>
                         TODO
                     </React.Fragment>
                 } />
-                <Project title={"Platinum"} images={["assets/projects/platinum/img1.png", "assets/projects/platinum/img2.png", "assets/projects/platinum/img3.png"]} languages={[
-                    { id: "langs/cpp", label: "C++" }
+
+                <Project info={projects.platinum} images={generateImageArr("assets/projects/platinum", 3)} languages={[
+                    langs.cpp
                 ]} tags={[
-                    { id: "skills/parsing", label: "Parsing" },
-                    { id: "skills/alg", label: "Algorithms" },
-                    { id: "skills/swe", label: "Software Engineering" }
+                    skills.parsing,
+                    skills.alg,
+                    skills.swe
                 ]} description={
                     <React.Fragment>
                         TODO
                     </React.Fragment>
                 } />
-                <Project title={"3D Function Renderer"} images={["assets/projects/3dfr/img1.png", "assets/projects/3dfr/img2.png", "assets/projects/3dfr/img3.png", "assets/projects/3dfr/img4.png"]} languages={[
-                    { id: "langs/cpp", label: "C++" }
+
+                <Project info={projects.fn3d} images={generateImageArr("assets/projects/fn3d", 4)} languages={[
+                    langs.cpp
                 ]} tags={[
-                    { id: "skills/cg", label: "Computer Graphics" },
-                    { id: "skills/alg", label: "Algorithms" },
+                    skills.cg,
+                    skills.alg,
                 ]} description={
                     <React.Fragment>
                         TODO
                     </React.Fragment>
                 } />
-                <Project title={"One Line Ray Tracer"} images={["assets/projects/olrt/img1.png"]} languages={[
-                    { id: "langs/js", label: "Java Scripts" }
+
+                <Project info={projects.olrt} images={generateImageArr("assets/projects/olrt", 1)} languages={[
+                    langs.js_ts
                 ]} tags={[
-                    { id: "skills/cg", label: "Computer Graphics" },
-                    { id: "skills/alg", label: "Algorithms" }
+                    skills.cg,
+                    skills.alg
                 ]} description={
                     <React.Fragment>
                         TODO
                     </React.Fragment>
                 } />
-                <Project title={"N-Body Simulator"} images={["assets/projects/n-body/img1.png", "assets/projects/n-body/img2.png", "assets/projects/n-body/img3.png"]} languages={[
-                    { id: "langs/js", label: "Java Script" }
+
+                <Project info={projects.nbody} images={generateImageArr("assets/projects/nbody", 3)} languages={[
+                    langs.js_ts
                 ]} tags={[
-                    { id: "skills/cg", label: "Computer Graphics" }
+                    skills.cg,
+                    skills.alg
                 ]} description={
                     <React.Fragment>
                         TODO
                     </React.Fragment>
                 } />
-                <Project title={"Markov Chain Text Generator"} images={[
-                    // TODO
-                ]} languages={[
-                    { id: "langs/cpp", label: "C++" }
+
+                <Project info={projects.textgen} images={generateImageArr("assets/projects/textgen", 3)} languages={[
+                    langs.cpp
                 ]} tags={[
-                    { id: "skills/ml", label: "Machine Learning" },
-                    { id: "skills/algs", label: "Algorithms" }
-                ]} />
-                <Project title={"Clear Context"} images={["assets/projects/clearcontext/img1.png", "assets/projects/clearcontext/img2.png"]} languages={[
-                    { id: "langs/js", label: "Java Script + Type Script" },
-                    { id: "langs/html", label: "HTML + CSS" },
+                    skills.ml,
+                    skills.alg
+                ]} description={
+                    <React.Fragment>
+                        TODO
+                    </React.Fragment>
+                } />
+
+                <Project info={projects.clearcontext} images={generateImageArr("assets/projects/clearcontext", 2)} languages={[
+                    langs.js_ts,
+                    langs.html_css
                 ]} tags={[
-                    { id: "skills/node", label: "Node" },
-                    { id: "skills/react", label: "React" },
-                    { id: "skills/ui", label: "UI / UX" },
-                    { id: "skills/hosting", label: "Hosting" },
-                    { id: "skills/extensions", label: "Chrome Extensions" },
-                    { id: "skills/scrape", label: "Web Scraping" },
-                    { id: "skills/alg", label: "Algorithms" },
-                    { id: "skills/swe", label: "Software Engineering" },
-                ]} />
-                <Project title={"Quote It"} images={["assets/projects/quoteit/img1.png"]} languages={[
-                    { id: "langs/js", label: "Java Script" }
+                    skills.node,
+                    skills.react,
+                    skills.ui,
+                    skills.hosting,
+                    skills.extensions,
+                    skills.scraping,
+                    skills.alg,
+                    skills.swe,
+                ]} description={
+                    <React.Fragment>
+                        TODO
+                    </React.Fragment>
+                } />
+
+                <Project info={projects.quoteit} images={generateImageArr("assets/projects/quoteit", 1)} languages={[
+                    langs.js_ts
                 ]} tags={[
-                    { id: "skills/react", label: "React Native" },
-                    { id: "skills/ui", label: "UI / UX" },
-                    { id: "skills/hosting", label: "Hosting" },
-                    { id: "skills/swe", label: "Software Engineering" },
-                ]} />
-                <Project title={"Quick Dodge"} images={["assets/projects/quickdodge/img1.png"]} languages={[
-                    { id: "langs/js", label: "Java Script" }
+                    skills.react,
+                    skills.ui,
+                    skills.hosting,
+                    skills.swe,
+                ]} description={
+                    <React.Fragment>
+                        TODO
+                    </React.Fragment>
+                } />
+
+                <Project info={projects.quickdodge} images={generateImageArr("assets/projects/quickdodge", 1)} languages={[
+                    langs.js_ts
                 ]} tags={[
-                    { id: "skills/react", label: "React Native" },
-                    { id: "skills/ui", label: "UI / UX" },
-                    { id: "skills/cg", label: "Computer Graphics" },
-                    { id: "skills/hosting", label: "Hosting" },
-                    { id: "skills/swe", label: "Software Engineering" }
-                ]} />
-                <Project title={"Eureka"} images={["assets/projects/eureka/img1.png", "assets/projects/eureka/img2.png", "assets/projects/eureka/img3.png", "assets/projects/eureka/img4.png"]} languages={[
-                    { id: "langs/js", label: "Java Script" }
+                    skills.react,
+                    skills.ui,
+                    skills.cg,
+                    skills.hosting
+                ]} description={
+                    <React.Fragment>
+                        TODO
+                    </React.Fragment>
+                } />
+
+                <Project info={projects.eureka} images={generateImageArr("assets/projects/eureka", 4)} languages={[
+                    langs.js_ts,
+                    langs.html_css
                 ]} tags={[
-                    { id: "skills/react", label: "React" },
-                    { id: "skills/ui", label: "UI / UX" },
-                    { id: "skills/swe", label: "Software Engineering" }
-                ]} />
-                <Project title={"Lancer Scout"} images={["assets/projects/lancerscout/img1.png", "assets/projects/lancerscout/img2.png", "assets/projects/lancerscout/img3.png"]} languages={[
-                    { id: "langs/js", label: "Java Script" }
-                ]} tags={[
-                    { id: "skills/node", label: "Node" },
-                    { id: "skills/react", label: "React" },
-                    { id: "skills/ui", label: "UI / UX" },
-                    { id: "skills/algs", label: "Algorithms" },
-                    { id: "skills/lead", label: "Team Leadership" },
-                    { id: "skills/swe", label: "Software Engineering" },
-                    { id: "skills/comm", label: "Communication" },
+                    skills.react,
+                    skills.ui,
+                    skills.swe
+                ]} description={
+                    <React.Fragment>
+                        TODO
+                    </React.Fragment>
+                } />
+
+                <Project info={projects.lancerscout} images={generateImageArr("assets/projects/lancerscout", 3)} languages={[
+                    langs.js_ts,
+                    langs.html_css
+                ]} description={
+                    <React.Fragment>
+                        TODO
+                    </React.Fragment>
+                } tags={[
+                    skills.node,
+                    skills.react,
+                    skills.ui,
+                    skills.alg,
+                    skills.lead,
+                    skills.swe,
+                    skills.comm,
                 ]} />
             </section>
             <section id={"skills"}>
                 <h1>Skills</h1>
+
                 <div className={"skills-container"}>
-                    <Skill title={"C++"} projects={["Convolutional Neural Network", "Neural Network"]} description={
+                    <Skill info={langs.cpp} projects={[
+                        projects.cnn,
+                        projects.nn,
+                        projects.fa,
+                        projects.parser,
+                        projects.platinum,
+                        projects.fn3d,
+                        projects.textgen
+                    ]} description={
                         <React.Fragment>
-                            Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
-                            <br />
-                            
-                            Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                            TODO
                         </React.Fragment>
                     } />
-                    <Skill title={"Algorithms"} projects={["Convolutional Neural Network", "Neural Network"]} description={
+
+                    <Skill info={langs.java} projects={[
+                        projects.frc24,
+                        projects.frc23
+                    ]} description={
                         <React.Fragment>
-                            Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
-                            <br />
-                            <br />
-                            Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
-                            <br />
-                            <br />
-                            Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                            TODO
                         </React.Fragment>
                     } />
-                    <Skill title={"Machine Learning"} projects={["Convolutional Neural Network", "Neural Network"]} description={
+
+                    <Skill info={langs.js_ts} projects={[
+                        projects.olrt,
+                        projects.nbody,
+                        projects.clearcontext,
+                        projects.quoteit,
+                        projects.quickdodge,
+                        projects.eureka,
+                        projects.lancerscout
+                    ]} description={
                         <React.Fragment>
-                            Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
-                            <br />
-                            <br />
-                            <br />
-                            Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                            TODO
                         </React.Fragment>
                     } />
-                    <Skill title={"Algorithms"} projects={["Convolutional Neural Network", "Neural Network"]} description={
+
+                    <Skill info={langs.html_css} projects={[
+                        projects.clearcontext,
+                        projects.eureka,
+                        projects.lancerscout
+                    ]} description={
                         <React.Fragment>
-                            Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
-                            
-                            <br />
-                            Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                            TODO
                         </React.Fragment>
                     } />
-                    <Skill title={"Machine Learning"} projects={["Convolutional Neural Network", "Neural Network"]} description={
+
+                    <Skill info={langs.tex} projects={[
+                        projects.fa
+                    ]} description={
                         <React.Fragment>
-                            Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
-                            <br />
-                            <br />
-                            Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
-                            <br />
-                            Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                            TODO
+                        </React.Fragment>
+                    } />
+
+                    <Skill info={skills.ml} projects={[
+                        projects.cnn,
+                        projects.nn,
+                        projects.textgen
+                    ]} description={
+                        <React.Fragment>
+                            TODO
+                        </React.Fragment>
+                    } />
+
+                    <Skill info={skills.flt} projects={[
+                        projects.fa
+                    ]} description={
+                        <React.Fragment>
+                            TODO
+                        </React.Fragment>
+                    } />
+
+                    <Skill info={skills.regex} projects={[
+                        projects.fa
+                    ]} description={
+                        <React.Fragment>
+                            TODO
+                        </React.Fragment>
+                    } />
+
+                    <Skill info={skills.parsing} projects={[
+                        projects.fa,
+                        projects.parser,
+                        projects.platinum
+                    ]} description={
+                        <React.Fragment>
+                            TODO
+                        </React.Fragment>
+                    } />
+
+                    <Skill info={skills.cv} projects={[
+                        projects.cnn,
+                        projects.frc24,
+                        projects.frc23
+                    ]} description={
+                        <React.Fragment>
+                            TODO
+                        </React.Fragment>
+                    } />
+
+                    <Skill info={skills.cg} projects={[
+                        projects.cnn,
+                        projects.fn3d,
+                        projects.olrt,
+                        projects.nbody,
+                        projects.quickdodge
+                    ]} description={
+                        <React.Fragment>
+                            TODO
+                        </React.Fragment>
+                    } />
+
+                    <Skill info={skills.robo} projects={[
+                        projects.frc24,
+                        projects.frc23
+                    ]} description={
+                        <React.Fragment>
+                            TODO
+                        </React.Fragment>
+                    } />
+
+                    <Skill info={skills.scraping} projects={[
+                        projects.clearcontext
+                    ]} description={
+                        <React.Fragment>
+                            TODO
+                        </React.Fragment>
+                    } />
+
+                    <Skill info={skills.alg} projects={[
+                        projects.cnn,
+                        projects.nn,
+                        projects.frc24,
+                        projects.frc23,
+                        projects.fa,
+                        projects.parser,
+                        projects.platinum,
+                        projects.fn3d,
+                        projects.olrt,
+                        projects.nbody,
+                        projects.textgen,
+                        projects.clearcontext,
+                        projects.lancerscout
+                    ]} description={
+                        <React.Fragment>
+                            TODO
+                        </React.Fragment>
+                    } />
+
+                    <Skill info={skills.ui} projects={[
+                        projects.clearcontext,
+                        projects.quoteit,
+                        projects.quickdodge,
+                        projects.eureka,
+                        projects.lancerscout
+                    ]} description={
+                        <React.Fragment>
+                            TODO
+                        </React.Fragment>
+                    } />
+
+                    <Skill info={skills.node} projects={[
+                        projects.clearcontext,
+                        projects.lancerscout
+                    ]} description={
+                        <React.Fragment>
+                            TODO
+                        </React.Fragment>
+                    } />
+
+                    <Skill info={skills.react} projects={[
+                        projects.clearcontext,
+                        projects.quoteit,
+                        projects.quickdodge,
+                        projects.eureka,
+                        projects.lancerscout
+                    ]} description={
+                        <React.Fragment>
+                            TODO
+                        </React.Fragment>
+                    } />
+
+                    <Skill info={skills.hosting} projects={[
+                        projects.clearcontext,
+                        projects.quoteit,
+                        projects.quickdodge
+                    ]} description={
+                        <React.Fragment>
+                            TODO
+                        </React.Fragment>
+                    } />
+
+                    <Skill info={skills.extensions} projects={[
+                        projects.clearcontext
+                    ]} description={
+                        <React.Fragment>
+                            TODO
+                        </React.Fragment>
+                    } />
+
+                    <Skill info={skills.lead} projects={[
+                        projects.frc24,
+                        projects.frc23,
+                        projects.lancerscout
+                    ]} description={
+                        <React.Fragment>
+                            TODO
+                        </React.Fragment>
+                    } />
+
+                    <Skill info={skills.swe} projects={[
+                        projects.cnn,
+                        projects.nn,
+                        projects.frc24,
+                        projects.frc23,
+                        projects.fa,
+                        projects.parser,
+                        projects.platinum,
+                        projects.clearcontext,
+                        projects.quoteit,
+                        projects.eureka,
+                        projects.lancerscout
+                    ]} description={
+                        <React.Fragment>
+                            TODO
+                        </React.Fragment>
+                    } />
+
+                    <Skill info={skills.comm} projects={[
+                        projects.frc24,
+                        projects.frc23,
+                        projects.lancerscout
+                    ]} description={
+                        <React.Fragment>
+                            TODO
                         </React.Fragment>
                     } />
                 </div>
             </section>
             <section id={"experience"}>
                 <h1>Experience</h1>
-                <Experience title={"RoboLancers Lead Programmer (2022 - 2024)"} images={["https://picsum.photos/400/250", "https://picsum.photos/500/300"]} projects={[]} tags={["Leadership", "Communication"]} description={
+                
+                <Experience title={"RoboLancers Lead Programmer (2022 - 2024)"} images={generateImageArr("assets/experience/frc-prog-lead", 5)} projects={[
+                    projects.frc24,
+                    projects.frc23,
+                    projects.lancerscout
+                ]} tags={[
+                    langs.java,
+                    skills.cv,
+                    skills.robo,
+                    skills.alg,
+                    skills.lead,
+                    skills.swe,
+                    skills.comm
+                ]} description={
                     <React.Fragment>
-                        Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
-                        <br />
-                        <br />
-                        Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
-                        <br />
-                        Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                        TODO
                     </React.Fragment>
                 } />
-                <Experience title={"RoboLancers Programmer (2020 - 2022)"} images={["https://picsum.photos/400/250", "https://picsum.photos/500/300"]} projects={["Lancer Scout", "Rapid React", "Other Game", "Other Project", "Other Game", "Other Project"]} tags={[]} description={
+
+                <Experience title={"RoboLancers Programmer (2021 - 2022)"} images={generateImageArr("assets/experience/frc-prog", 2)} projects={[]} tags={[
+                    langs.java,
+                    skills.cv,
+                    skills.robo,
+                    skills.alg,
+                    skills.swe,
+                    skills.comm
+                ]} description={
                     <React.Fragment>
-                        Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
-                        <br />
-                        <br />
-                        Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
-                        <br />
-                        Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                        TODO
                     </React.Fragment>
                 } />
-                <Experience title={"Summer Camp Counselor (2024 - 2025)"} images={["https://picsum.photos/400/250", "https://picsum.photos/500/300"]} projects={[]} tags={[]} description={
+
+                <Experience title={"Summer Camp Counselor (2024 - 2025)"} images={[]} projects={[]} tags={[
+                    skills.lead,
+                    skills.comm
+                ]} description={
                     <React.Fragment>
-                        Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
-                        <br />
-                        <br />
-                        Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
-                        <br />
-                        Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                        TODO
                     </React.Fragment>
                 } />
             </section>
             <section id={"education"}>
                 <h1>Education</h1>
+
                 <div className={"education-container"}>
                     <Education title={"UMass Amherst Undergrad"} description={
                         <React.Fragment>
-                            Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
-                            <br />
-                            
-                            Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                            TODO
                         </React.Fragment>
                     } />
+                    
                     <Education title={"Central High School"} description={
                         <React.Fragment>
-                            Lorem ipsum dolor sit amet, mei ne munere qualisque, eum ut persius intellegat. No per assum iudico. Sea dolores propriae cu, ea hinc inermis dolores duo. Qui no dicam intellegat, at sea dicta officiis, quis debet no mea. At equidem eloquentiam mea, mei decore animal fabulas ut, dolore tritani usu in.
-                            <br />
-                            <br />
-                            Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
-                            <br />
-                            <br />
-                            Et vix amet dicta sanctus, nec duis ignota antiopam in. Dico docendi comprehensam ex sit. Id mei dico democritum definitiones, reque tibique cu pro. Id nominavi copiosae comprehensam usu, no sed solum delenit. Argumentum consequuntur nec ad.
+                            TODO
                         </React.Fragment>
                     } />
                 </div>

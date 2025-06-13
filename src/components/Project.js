@@ -53,12 +53,12 @@ const Carousel = ({ images }) => {
     )
 }
 
-const Project = ({ title, images, languages, tags, description }) => {
+const Project = ({ info, images, languages, tags, description }) => {
     const languagesComponents = []
 
     languages.forEach((language, index) => {
         languagesComponents.push(
-            <HashLink key={index} to={"#" + language.id} className={"descriptor"}>
+            <HashLink smooth key={index} to={"#" + language.id} className={"descriptor"}>
                 {
                     language.label
                 }
@@ -70,7 +70,7 @@ const Project = ({ title, images, languages, tags, description }) => {
 
     tags.forEach((tag, index) => {
         tagsComponents.push(
-            <HashLink key={index} to={"#" + tag.id} className={"descriptor"}>
+            <HashLink smooth key={index} to={"#" + tag.id} className={"descriptor"}>
                 {
                     tag.label
                 }
@@ -79,11 +79,11 @@ const Project = ({ title, images, languages, tags, description }) => {
     })
 
     return (
-        <article className={"project"}>
+        <article id={info.id} className={"project"}>
             <div className={"info"}>
                 <h2>
                     {
-                        title
+                        info.label
                     }
                 </h2>
                 {
