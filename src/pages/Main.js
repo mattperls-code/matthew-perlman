@@ -48,6 +48,7 @@ const Main = () => {
         fa: { id: "projects/fa", label: "Finite Automata", url: "https://github.com/mattperls-code/finite-automata" },
         parser: { id: "projects/parser", label: "Parser", url: "https://github.com/mattperls-code/parser" },
         platinum: { id: "projects/platinum", label: "Platinum", url: "https://github.com/mattperls-code/platinum" },
+        connected: { id: "projects/connected", label: "Connected", url: "https://github.com/mattperls-code/connected" },
         fn3d: { id: "projects/fn3d", label: "3D Function Renderer", url: "https://github.com/mattperls-code/3d-function-renderer" },
         olrt: { id: "projects/olrt", label: "One Line Ray Tracer", url: "https://github.com/mattperls-code/one-line-ray-tracer" },
         nbody: { id: "projects/nbody", label: "N-Body Simulator", url: "https://github.com/mattperls-code/n-body-simulator" },
@@ -128,7 +129,7 @@ const Main = () => {
                 <div className={"education-container"}>
                     <Education title={"UMass Amherst Undergrad"} description={
                         <React.Fragment>
-                            Overal GPA: 3.932
+                            Overall GPA: 3.932
                             <br />
                             Major GPA: 3.889
                             <br /><br />
@@ -339,6 +340,21 @@ const Main = () => {
                     </React.Fragment>
                 } />
 
+                <Project info={projects.connected} images={generateImageArr("assets/projects/connected", 3)} languages={[
+                    langs.cpp
+                ]} tags={[
+                    skills.alg,
+                    skills.swe
+                ]} description={
+                    <React.Fragment>
+                        A tool to find and visualize connections in undirected graphs.
+                        <br /><br />
+                        Connected loads graphs from human readable text where you can then use the CLI to find direct neighbors, communities, and paths from one vertex to another.
+                        <br /><br />
+                        The images show graph visualizations of celebrity connections, greek mythology, and musical artists.
+                    </React.Fragment>
+                } />
+
                 <Project info={projects.fn3d} images={generateImageArr("assets/projects/fn3d", 4)} languages={[
                     langs.cpp
                 ]} tags={[
@@ -507,6 +523,7 @@ const Main = () => {
                         projects.fa,
                         projects.parser,
                         projects.platinum,
+                        projects.connected,
                         projects.fn3d,
                         projects.textgen
                     ]} description={
@@ -705,6 +722,7 @@ const Main = () => {
                         projects.fa,
                         projects.parser,
                         projects.platinum,
+                        projects.connected,
                         projects.fn3d,
                         projects.olrt,
                         projects.nbody,
@@ -817,6 +835,7 @@ const Main = () => {
                         projects.fa,
                         projects.parser,
                         projects.platinum,
+                        projects.connected,
                         projects.clearcontext,
                         projects.quoteit,
                         projects.eureka,

@@ -3,6 +3,7 @@ import React from "react"
 import { BrowserRouter, Routes, Route } from "react-router"
 
 import MainPage from "./pages/Main"
+import ResumePage from "./pages/Resume"
 
 import "./styles.scss"
 
@@ -11,6 +12,7 @@ const App = () => {
         <BrowserRouter>
             <Routes>
                 <Route path={"/"} Component={MainPage} />
+                <Route path={"/resume"} Component={ResumePage} />
             </Routes>
         </BrowserRouter>
     )
