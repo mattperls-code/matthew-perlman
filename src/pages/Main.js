@@ -11,18 +11,21 @@ import Experience from "../components/Experience"
 import Project from "../components/Project"
 import Skill from "../components/Skill"
 
+import "./main.scss"
+
 const Main = () => {
     const langs = {
         cpp: { id: "langs/cpp", label: "C++" },
         js_ts: { id: "langs/js_ts", label: "Java Script / Type Script" },
         java: { id: "langs/java", label: "Java" },
         html_css: { id: "langs/html_css", label: "HTML + CSS" },
-        tex: { id: "langs/tex", label: "LaTex" }
+        tex: { id: "langs/tex", label: "LaTeX" }
     }
 
     const skills = {
         ml: { id: "skills/ml", label: "Machine Learning" },
         flt: { id: "skills/flt", label: "Formal Language Theory" },
+        nlp: { id: "skills/nlp", label: "Natural Language Processing" },
         regex: { id: "skills/regex", label: "Regular Expressions" },
         parsing: { id: "skills/parsing", label: "Parsing" },
         cv: { id: "skills/cv", label: "Computer Vision" },
@@ -42,10 +45,11 @@ const Main = () => {
 
     const projects = {
         cnn: { id: "projects/cnn", label: "Convolutional Neural Network", url: "https://github.com/mattperls-code/convolutional-neural-network" },
+        w2v: { id: "projects/w2v", label: "Word2Vec", url: "https://github.com/mattperls-code/word2vec" },
         nn: { id: "projects/nn", label: "Neural Network", url: "https://github.com/mattperls-code/neural-network" },
+        fa: { id: "projects/fa", label: "Finite Automata", url: "https://github.com/mattperls-code/finite-automata" },
         frc24: { id: "projects/frc24", label: "2024 FRC Robot", url: "https://github.com/RoboLancers/321-Crescendo-2024" },
         frc23: { id: "projects/frc23", label: "2023 FRC Robot", url: "https://github.com/RoboLancers/FRC-Main-2023" },
-        fa: { id: "projects/fa", label: "Finite Automata", url: "https://github.com/mattperls-code/finite-automata" },
         parser: { id: "projects/parser", label: "Parser", url: "https://github.com/mattperls-code/parser" },
         platinum: { id: "projects/platinum", label: "Platinum", url: "https://github.com/mattperls-code/platinum" },
         connected: { id: "projects/connected", label: "Connected", url: "https://github.com/mattperls-code/connected" },
@@ -112,15 +116,11 @@ const Main = () => {
             <section id={"about"}>
                 <h1>About</h1>
                 <div>
-                Hello, my name is Matt, and I'm a sophomore studying Computer Science at UMass Amherst.
-                <br /><br />
-                I love to program and am very passionate about computer graphics, robotics, and machine learning. I've been writing code for about 8 years now and I'm an adept problem solver across many fields. I've written parsers, neural networks, programming languages, and rendering engines all from scratch in C++ as well as award winning websites, chrome extensions, and mobiles apps using JavaScript and React.
-                <br /><br />
-                I've released several iOS mobile apps, done some professional freelance web development over the years, and am a founding member and the CTO of ClearContext, an AI powered tool to help identify and eliminate bias in online media.
-                <br /><br />
-                As a high schooler, I was the lead programmer and a driver for our FRC team, the Robolancers, and won the world championship in 2024. My two years of leadership on our 50+ person team taught me valuable soft skills about work management, delegation, dev ops, and communication as well as important technical skills like computer vision, control theory, and autonomous planning.
-                <br /><br />
-                I love building interesting and innovative projects, and am always looking for something new to learn about. Please reach out with any questions or ideas!
+                    My name is Matt, and I'm a junior studying Computer Science at UMass Amherst with a passion for machine learning, computer graphics, and robotics. In my 8 years of programming I've written convolutional neural networks, word embedding models, parsers, programming languages, and rendering engines all from scratch in C++ as well as award winning websites, chrome extensions, and iOS mobiles apps using JavaScript, React, and Node.
+                    <br /><br />
+                    As the software lead and driver, I led my high school robotics team, the RoboLancers, to win the FRC World Championship in 2024. My two years of leadership on our 50+ person team taught me valuable soft skills about work management, delegation, dev ops, and communication as well as important technical skills like computer vision, control theory, and autonomous planning.
+                    <br /><br />
+                    I love building interesting and innovative projects, and am always looking for something new to learn about. Please reach out with any questions or ideas!
                 </div>
             </section>
             <section id={"education"}>
@@ -129,21 +129,17 @@ const Main = () => {
                 <div className={"education-container"}>
                     <Education title={"UMass Amherst Undergrad"} description={
                         <React.Fragment>
-                            Overall GPA: 3.932
-                            <br />
-                            Major GPA: 3.889
+                            GPA: 3.93
                             <br /><br />
-                            Currently I am a sophomore at the University of Massachusetts Amherst studying Computer Science.
+                            Currently I am a junior at the University of Massachusetts Amherst studying Computer Science.
                             <br /><br />
-                            I plan to graduate with a B.S. in 2027 and a M.S. in 2028.
+                            I graduate in Spring 2027 and plan to pursue a Master's Degree the following year.
                         </React.Fragment>
                     } />
                     
                     <Education title={"Central High School"} description={
                         <React.Fragment>
-                            Unweighted GPA: 3.87
-                            <br />
-                            Weighted GPA: 4.33
+                            GPA: 3.87
                             <br /><br />
                             I attended Central High School from 2020-2024 with a class size of roughly 600 students.
                             <br /><br />
@@ -155,7 +151,23 @@ const Main = () => {
             <section id={"experience"}>
                 <h1>Experience</h1>
 
-                <Experience title={"RoboLancers Lead Programmer (2022 - 2024)"} images={generateImageArr("assets/experience/frc-prog-lead", 5)} projects={[
+                <Experience title={"Supplemental Instruction Leader (2025 - Present)"} images={generateImageArr("assets/experience/si-leader", 1)} projects={[]}
+                tags={[
+                    skills.comm,
+                    skills.lead
+                ]} description={
+                    <React.Fragment>
+                        I joined the UMass supplemental instruction team in 2025 as a junior to explore my university's academia pipeline and gain experience teaching in a more formal role.
+                        I decided to work with a section of CS240, an undergrad probabilistic computing course I'd taken the year before.
+                        <br /><br />
+                        As an SI Leader, I delivered weekly lectures covering probability theory and statistical modeling.
+                        I also created worksheets and led weekly review sessions on topics like random variables, Bayesian Networks, Markov processes, and Game Theory.
+                        <br /><br />
+                        I'm still working as an SI Leader now, and plan to continue supporting CS240 or other undergrad CS courses in the future.
+                    </React.Fragment>
+                } />
+
+                <Experience title={"RoboLancers Software Lead (2022 - 2024)"} images={generateImageArr("assets/experience/frc-prog-lead", 5)} projects={[
                     projects.frc24,
                     projects.frc23,
                     projects.lancerscout
@@ -185,6 +197,17 @@ const Main = () => {
                         With a sharp team of engineers and programmers and a ton of luck, we ultimately made it to the World Championship and won.
                     </React.Fragment>
                 } />
+
+                {/* Maybe include? */}
+                {/* <Experience title={"Summer Camp Counselor (2024, 2025)"} images={generateImageArr("assets/experience/counselor", 0)} projects={[]}
+                tags={[
+                    skills.comm,
+                    skills.lead
+                ]} description={
+                    <React.Fragment>
+                        TODO
+                    </React.Fragment>
+                } /> */}
 
                 <Experience title={"RoboLancers Programmer (2021 - 2022)"} images={generateImageArr("assets/experience/frc-prog", 2)} projects={[]} tags={[
                     langs.java,
@@ -227,6 +250,23 @@ const Main = () => {
                         The demo images show the model structure and training results for an MNIST hand written digits classifier implemented using the CNN class.
                     </React.Fragment>
                 } />
+                
+                <Project info={projects.w2v} images={generateImageArr("assets/projects/w2v", 2)} languages={[
+                    langs.cpp
+                ]} tags={[
+                    skills.ml,
+                    skills.nlp,
+                    skills.alg,
+                    skills.swe
+                ]} description={
+                    <React.Fragment>
+                        A word embedding library based on the continuous bag of words model.
+                        <br /><br />
+                        The Word2Vec class generates word embeddings from the provided corpus using unsupervised learning.
+                        <br /><br />
+                        The demo images show nearest neighbors and compositions generated by a 150 dimension embedding model trained for 100 epochs on the text8 dataset using the library.
+                    </React.Fragment>
+                } />
 
                 <Project info={projects.nn} images={generateImageArr("assets/projects/nn", 5)} languages={[
                     langs.cpp
@@ -241,6 +281,25 @@ const Main = () => {
                         The NN class manages constructing new networks, randomizing parameters, training using back propagation, and making feedforward predictions.
                         <br /><br />
                         The demo images show various models implemented with the NN class that approximate different functions, shapes, and regions.
+                    </React.Fragment>
+                } />
+
+                <Project info={projects.fa} images={generateImageArr("assets/projects/fa", 3)} languages={[
+                    langs.cpp,
+                    langs.tex
+                ]} tags={[
+                    skills.flt,
+                    skills.regex,
+                    skills.parsing,
+                    skills.alg,
+                    skills.swe
+                ]} description={
+                    <React.Fragment>
+                        A powerful toolkit for evaluating, analyzing, and converting finite automata and regular expressions.
+                        <br /><br />
+                        The FiniteAutomata class can compare different languages, evaluate strings for membership, and convert between various subtypes of finite automata and regular expression.
+                        These conversions include transitions between literal expression strings, regular expressions, lambda NFAs, NFAs, DFAs, and min DFAs.
+                        The project also supports multiple export options, allowing for easy integration with LaTex, PDFs, and images.
                     </React.Fragment>
                 } />
 
@@ -284,25 +343,6 @@ const Main = () => {
                         Lucy uses a large 3 segment arm to pickup and place various items on the field.
                         To control this very heavy machinary, we used custom PID on all the arm motors as well as inverse kinematics to determine joint angles.
                         It also uses a vision pipeline combined with odometry to follow complex autonomous motion paths.
-                    </React.Fragment>
-                } />
-
-                <Project info={projects.fa} images={generateImageArr("assets/projects/fa", 3)} languages={[
-                    langs.cpp,
-                    langs.tex
-                ]} tags={[
-                    skills.flt,
-                    skills.regex,
-                    skills.parsing,
-                    skills.alg,
-                    skills.swe
-                ]} description={
-                    <React.Fragment>
-                        A powerful toolkit for evaluating, analyzing, and converting finite automata and regular expressions.
-                        <br /><br />
-                        The FiniteAutomata class can compare different languages, evaluate strings for membership, and convert between various subtypes of finite automata and regular expression.
-                        These conversions include transitions between literal expression strings, regular expressions, lambda NFAs, NFAs, DFAs, and min DFAs.
-                        The project also supports multiple export options, allowing for easy integration with LaTex, PDFs, and images.
                     </React.Fragment>
                 } />
 
@@ -405,6 +445,7 @@ const Main = () => {
                     langs.cpp
                 ]} tags={[
                     skills.ml,
+                    skills.nlp,
                     skills.alg
                 ]} description={
                     <React.Fragment>
@@ -426,6 +467,7 @@ const Main = () => {
                     skills.ui,
                     skills.hosting,
                     skills.extensions,
+                    skills.nlp,
                     skills.scraping,
                     skills.alg,
                     skills.swe,
@@ -590,10 +632,9 @@ const Main = () => {
                         projects.fa
                     ]} description={
                         <React.Fragment>
-                            I learned LaTex for my discrete math class in college, and have since used it whenever I need to write proofs or pretty math.
+                            I learned LaTeX for my discrete math class in college, and have since used it whenever I need to write proofs or pretty math.
                             <br /><br />
-                            I'm still a beginner at using LaTex, but have recently been working it into some of my personal projects.
-                            I hope to continue using it in school and my work.
+                            I mainly use it for my job as an SI Leader, I create all of my worksheets and discussion content using LaTeX.
                         </React.Fragment>
                     } />
 
@@ -607,7 +648,7 @@ const Main = () => {
                             <br /><br />
                             I find the theory incredibly fascinating and have enjoyed learning about the math and concepts behind things like neural networks, large language models, and image classification.
                             <br /><br />
-                            I recently decided to put my knowledge to the test, and built a neural network and convolutional neural network by hand.
+                            I recently decided to put my knowledge to the test, and built a neural network, convolutional neural network, and eventually word embedding model by hand.
                             The projects ended up being very complicated but also very rewarding, and I hope to continue this kind of work in the future through personal or career research.
                         </React.Fragment>
                     } />
@@ -623,6 +664,20 @@ const Main = () => {
                             I built out a parser combinator library for fun, and then a finite automata project using what I was learning in my class.
                             <br /><br />
                             I find Formal Language Theory to be a really intriguing field, and I'm interested in exploring further in the future, potentially with context sensitive grammars.
+                        </React.Fragment>
+                    } />
+
+                    <Skill info={skills.nlp} projects={[
+                        projects.w2v,
+                        projects.textgen,
+                        projects.clearcontext
+                    ]} description={
+                        <React.Fragment>
+                            I've been increasingly interested in Natural Language Processing since I started building my deep learning projects, and I took my first real stab at it while creating the word embedding model.
+                            <br /><br />
+                            I've also done a bit of applied NLP in ClearContext, where I used various LLMs to process and consolidate scraped data.
+                            <br /><br />
+                            I hope to eventually extend my neural network and embedding libraries to create a GPT from scratch.
                         </React.Fragment>
                     } />
 
