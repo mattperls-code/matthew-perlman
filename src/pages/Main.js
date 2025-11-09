@@ -52,6 +52,7 @@ const Main = () => {
         frc23: { id: "projects/frc23", label: "2023 FRC Robot", url: "https://github.com/RoboLancers/FRC-Main-2023" },
         parser: { id: "projects/parser", label: "Parser", url: "https://github.com/mattperls-code/parser" },
         platinum: { id: "projects/platinum", label: "Platinum", url: "https://github.com/mattperls-code/platinum" },
+        fcn: { id: "projects/fcn", label: "Flow Capacitated Networks", url: "https://github.com/mattperls-code/flow-capacitated-networks" },
         connected: { id: "projects/connected", label: "Connected", url: "https://github.com/mattperls-code/connected" },
         fn3d: { id: "projects/fn3d", label: "3D Function Renderer", url: "https://github.com/mattperls-code/3d-function-renderer" },
         olrt: { id: "projects/olrt", label: "One Line Ray Tracer", url: "https://github.com/mattperls-code/one-line-ray-tracer" },
@@ -380,6 +381,21 @@ const Main = () => {
                     </React.Fragment>
                 } />
 
+                <Project info={projects.fcn} images={generateImageArr("assets/projects/fcn", 3)} languages={[
+                    langs.cpp
+                ]} tags={[
+                    skills.alg,
+                    skills.swe
+                ]} description={
+                    <React.Fragment>
+                        A library to determine the max flow through various types of capacitated networks.
+                        <br /><br />
+                        The library supports operations on edge and vertex capacitated networks with any amount of sources and terminals. The FlowCapacitatedNetwork class automatically generates and manages residual graphs, performs path augmentation and iterative flow maximization, finds min cuts, and exports capacity, flow, and residual graphs as DOT or image files.
+                        <br /><br />
+                        The images show flow/residual graphs for a few example networks solved by the library.
+                    </React.Fragment>
+                } />
+
                 <Project info={projects.connected} images={generateImageArr("assets/projects/connected", 3)} languages={[
                     langs.cpp
                 ]} tags={[
@@ -561,10 +577,12 @@ const Main = () => {
                 <div className={"skills-container"}>
                     <Skill info={langs.cpp} projects={[
                         projects.cnn,
+                        projects.w2v,
                         projects.nn,
                         projects.fa,
                         projects.parser,
                         projects.platinum,
+                        projects.fcn,
                         projects.connected,
                         projects.fn3d,
                         projects.textgen
@@ -640,6 +658,7 @@ const Main = () => {
 
                     <Skill info={skills.ml} projects={[
                         projects.cnn,
+                        projects.w2v,
                         projects.nn,
                         projects.textgen
                     ]} description={
@@ -771,12 +790,14 @@ const Main = () => {
 
                     <Skill info={skills.alg} projects={[
                         projects.cnn,
+                        projects.w2v,
                         projects.nn,
                         projects.frc24,
                         projects.frc23,
                         projects.fa,
                         projects.parser,
                         projects.platinum,
+                        projects.fcn,
                         projects.connected,
                         projects.fn3d,
                         projects.olrt,
@@ -884,12 +905,14 @@ const Main = () => {
 
                     <Skill info={skills.swe} projects={[
                         projects.cnn,
+                        projects.w2v,
                         projects.nn,
                         projects.frc24,
                         projects.frc23,
                         projects.fa,
                         projects.parser,
                         projects.platinum,
+                        projects.fcn,
                         projects.connected,
                         projects.clearcontext,
                         projects.quoteit,
